@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { margin: 0; padding: 0; }
+body { overscroll-behavior: none; font-family: Inter, system-ui, sans-serif; }
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  line-height: 1;
+  user-select: none;
+}
+
+/* thin, unobtrusive scrollbars for inner scroll areas */
+.thin-scroll::-webkit-scrollbar { height: 8px; width: 8px; display: block; }
+.thin-scroll::-webkit-scrollbar-thumb { background: #bcc7de; border-radius: 8px; }
+
+.recharts-wrapper:focus, .recharts-surface:focus { outline: none; }
+
+@media print {
+  aside, .no-print { display: none !important; }
+  .print-shift { padding-left: 0 !important; }
+  header.app-header { position: static !important; }
+  main { padding-top: 0 !important; }
+}
